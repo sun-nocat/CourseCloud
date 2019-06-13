@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>index.html</h1>
+
+    <p>登录</p>
+    <input type="text" id="account">账号
+    <input type="password" id="password">密码
+    <select name="user" id="user">
+        <option value="student">学生</option>
+        <option value="admin">管理员</option>
+        <option value="teacher">教师</option>
+    </select>
+    <button id="btn">提交</button>
+
+    <br>
+    <p>注册</p>
+    <input type="text" id="account2">账号*
+    <input type="password" id="password2">密码*
+    <input type="text" id="name2">昵称*
+    <input type="text" id="tel2">电话
+    <input type="text" id="email2">邮箱
+    <input type="text" id="address2">地址
+    <button id="btn2">提交</button>
+
+
+
+
+
+    <script>
+
+    document.getElementById('btn').onclick = function(){
+        var account = document.getElementById('account').value
+        var password = document.getElementById('password').value
+        var user = document.getElementById('user').value
+
+        var xml = new XMLHttpRequest()
+        xml.open('post','/login',true)
+        xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xml.send(`account=${account}&password=${password}&user=${user}`)
+        xml.onreadystatechange = function(){
+            if(xml.readyState == 4 && xml.status == 200) {
+                console.log(xml.responseText)
+            }
+        }
+    }
+
+    
+    </script>
+
+    <script>
+
+        document.getElementById('btn2').onclick = function(){
+            var account = document.getElementById('account2').value
+            var password = document.getElementById('password2').value
+            var name = document.getElementById('name2').value
+            var tel = document.getElementById('tel2').value
+            var email = document.getElementById('email2').value
+            var address = document.getElementById('address2').value
+    
+            var xml = new XMLHttpRequest()
+            xml.open('post','/register',true)
+            xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xml.send(`account=${account}&password=${password}&name=${name}&tel=${tel}&email=${email}&address=${address}`)
+            xml.onreadystatechange = function(){
+                if(xml.readyState == 4 && xml.status == 200) {
+                    console.log(xml.responseText)
+                }
+            }
+        }
+        
+        
+    </script>
+    
+    <script>
+    document.getElementById('btn3').onclick=function(){
+        var idx = document.getElementById('idx3').value
+        var label = document.getElementById('label3').value
+        var xml = new XMLHttpRequest()
+            xml.open('post','/addArticleClass',true)
+            xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xml.send(`idx=${idx}&label=${label}`)
+            xml.onreadystatechange = function(){
+                if(xml.readyState == 4 && xml.status == 200) {
+                    console.log(xml.responseText)
+                }
+            }
+
+    }
+    </script>
+</body>
+</html>

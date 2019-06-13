@@ -1,0 +1,53 @@
+熟练掌握html,css,js
+熟悉jQuery.bootsrap.
+使用过iview.element-ui.layui
+熟悉vue，并有相应的开发经验。
+熟悉python  django开发
+熟悉nodejs  express开发
+使用过es6  webpack   git  
+熟练掌握linux基本操作，
+熟悉nginx  uwsgi，具备日志查看和排错能力
+使用过gzip压缩来压缩数据，提高页面的相应速度。
+了解websocket，使用过socket.io
+了解预防XSS和sql注入
+
+具有移动端页面开发经验
+
+
+
+
+成绩查询系统
+
+前端使用bootstap和jQuery，使用ajax进行前后端交互。后台使用node的express框架。
+1搭建node中间件服务器，使用nodejs官方oracledb库连接oracle数据库。
+2应用服务器使用oauth2.0获取经过sha1加密之后的密文。然后使用superagent请求中间件服务器。保证了用户信息不会被泄露。
+3中间体服务器只用来从数据库中获取数据。先已将中间体服务器开放全校使用，经过认证的服务器都可使用中间体服务器进行查成绩服务。
+
+
+
+
+一卡通信息查询系统
+
+前端使用vue实现SPA，vuerouter实现前端路由，axios进行前后端通信，使用element-ui前端组件。和echarts展示数据。后端使用python的django框架。
+1使用oAuth2.0登录，获取学生学号
+2然后使用request库进行模拟登陆爬取内网一卡通公司学生消费数据。并将数据进行清洗和统计。
+3方便了全校学生查询一卡通的消费情况。
+
+
+
+
+
+西安邮电大学虚拟主机分配系统
+
+前端使用vue实现，使用了vue-cli脚手架。使用iview前端组件库。使用vuerouter进行前端路由。axios进行前后端通信。后端使用python的django框架，使用Nginx+uwsgi进行部署。
+1使用python实现excel表格数据的导入和导出。
+2后台使用python定时检测主机运行情况，并使用echarts展示在前端页面。
+3如果后台程序检测到主机宕机，将会给用户发送邮件提醒，同时会在前端页面显示出错主机的情况。
+3系统上线之后替代了原始的excel记录主机分配情况的历史，系统24小时记录和检测主机运行情况，减少了主机宕机对生产的影响。
+
+
+
+
+
+
+
